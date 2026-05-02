@@ -1,0 +1,27 @@
+# hf-sync configuration file
+#
+# This file defines repositories to sync from git remotes to HuggingFace Hub.
+# Run `hf-sync sync --config hf-sync.yaml` to sync all configured repos.
+
+# Default settings applied to all repos unless overridden.
+defaults:
+  repo_type: dataset
+  private: false
+  tags: true
+  force: false
+  prune: false
+
+# Repositories to sync.
+repos:
+  # Example: Sync a GitHub dataset repo to HuggingFace
+  # - source: https://github.com/myorg/my-dataset.git
+  #   target: myuser/my-dataset
+  #   repo_type: dataset
+  #   branches:
+  #     - main
+
+  # Example: Sync a model repository
+  # - source: https://github.com/myorg/my-model.git
+  #   target: myuser/my-model
+  #   repo_type: model
+  #   private: true

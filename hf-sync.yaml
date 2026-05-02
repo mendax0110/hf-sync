@@ -1,0 +1,36 @@
+defaults:
+  repo_type: dataset
+  private: false
+  tags: true
+  force: true
+
+repos:
+  - source: https://github.com/fivethirtyeight/data.git
+    target: mendax0110/test-dataset-fivethirtyeight
+
+  - source: https://github.com/plotly/datasets.git
+    target: mendax0110/test-dataset-plotly
+
+  - source: https://github.com/awesomedata/awesome-public-datasets.git
+    target: mendax0110/test-dataset-awesome
+
+  - source: https://github.com/fivethirtyeight/data.git
+    target: mendax0110/test-dataset-main-only
+    branches:
+      - master
+
+  - source: https://github.com/plotly/datasets.git
+    target: mendax0110/test-dataset-no-tags
+    tags: false
+
+  - source: https://github.com/fivethirtyeight/data.git
+    target: mendax0110/test-dataset-incremental
+
+  - source: https://github.com/huggingface/datasets.git
+    target: mendax0110/test-dataset-hf-datasets
+    branches:
+      - main
+
+  - source: https://github.com/plotly/datasets.git
+    target: mendax0110/test-dataset-prune
+    prune: true
